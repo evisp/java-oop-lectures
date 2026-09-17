@@ -33,8 +33,19 @@ cannot yet do.
 | `week-03-rules-and-ownership` | 3 | Objects that refuse, What belongs to whom |
 | `week-04-collections` | 4 | Many objects, Objects that own other objects |
 
-`Account` changes every week. Open two weeks side by side: what changed is
-usually the lesson.
+## How Account changes
+
+```mermaid
+flowchart LR
+    W1["<b>Week 1</b><br/>Account<br/>balance"]
+    W2["<b>Week 2</b><br/>+ accountNumber<br/>+ ownerName<br/>+ toString()"]
+    W3["<b>Week 3</b><br/>final accountNumber<br/>static counter<br/>rules enforced"]
+    W4["<b>Week 4</b><br/>Customer holds<br/>List&lt;Account&gt;<br/>ownerName moves out"]
+
+    W1 --> W2 --> W3 --> W4
+```
+
+Open two weeks side by side. What changed is usually the lesson.
 
 ## Not here
 

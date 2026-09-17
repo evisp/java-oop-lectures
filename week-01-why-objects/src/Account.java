@@ -1,16 +1,28 @@
 /*
  * Week 1 - Why objects
- * The first class of the course.
+ *
+ * The first class of the course. Two ideas in ten lines:
+ * the data is private, and the rule about it lives right beside it.
+ *
+ * Week 2 builds this properly. Today it only has to make the point.
  */
 public class Account {
 
-    // TODO private field: balance
+    private double balance;
 
-    // TODO constructor taking the opening balance
+    public Account(double openingBalance) {
+        this.balance = openingBalance;
+    }
 
-    // TODO getBalance()
+    public double getBalance() {
+        return balance;
+    }
 
-    // TODO withdraw(double): false if the amount is not positive or is more
-    //      than the balance. Otherwise subtract and return true.
-    //      It must be able to say no. That is the point.
+    public boolean withdraw(double amount) {
+        if (amount <= 0 || amount > balance) {
+            return false;
+        }
+        balance -= amount;
+        return true;
+    }
 }
